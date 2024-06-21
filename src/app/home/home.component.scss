@@ -19,13 +19,18 @@
     text-align: center;
   
     h1 {
-      font-size: 3em;
+      font-size: 8em;
       animation: fadeInDown 1s;
+      line-height: 1.0;
+      font-family: 'Montserrat', sans-serif;
     }
   
     p {
-      font-size: 1.2em;
+      font-size: 2em;
       animation: fadeInUp 1s;
+      margin-bottom: 60px;
+      line-height: 1.5;
+      font-family: 'Montserrat', sans-serif;
     }
   
     .get-started {
@@ -55,17 +60,46 @@
     img {
       width: calc(33.33% - 0px); // 确保每张图片占据容器的1/3减去间距
       height: auto; // 自动调整高度以保持比例
-      opacity: 0.78; // 设置透明度
+      opacity: 0.95; // 设置透明度
   
     }
-  }   
+}
+
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column; /* 将图片排列为竖排 */
+        align-items: center;
+    }
+
+    .image-gallery img {
+        width: 100%; /* 调整图片宽度以适应屏幕 */
+    }
+}
   
 .info-section {
     padding: 40px 20px;
     background-color: #e67e22;
     color: #2e4053;
     text-align: left;
-    animation: fadeIn 1s;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+
+    .info-content {
+        width: 60%;
+        padding: 0 40px;
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin-bottom: 60px;
+        margin-top: 60px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+        .info-content {
+            width: 100%;
+        }
+    }
   
     h2 {
       font-size: 2em;
@@ -76,14 +110,79 @@
         font-size: 1.5em; // 调整段落字体大小
         margin-bottom: 20px;
         line-height: 1.5;
-        color: #010101;
+        color: #2e4053;
     }
   
 }
+
+
+.split-section {
+    display: flex;
+    height: 60vh;
+    
+  
+    .text-side {
+      flex: 1;
+      background-color: #e67e22; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      color: #2e4053;
+      font-family: 'Montserrat', sans-serif;
+      text-align: left;
+
+      .button-container {
+        padding: 0px 80px;
+        display: flex;
+        justify-content: flex-start;
+      }
+  
+      h2 {
+        padding: 0px 80px;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+  
+      p {
+        padding: 0px 80px;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+  
+      .view-more {
+        background-color: #2e4053;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      
+    }
+
+
+
+  
+    .image-side {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+}
+  
   
 .core-packages {
     padding: 40px 20px;
-    background-color: #fff;
+    background-color: #fff9c4;
     text-align: center;
   
     h2 {
