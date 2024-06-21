@@ -1,0 +1,55 @@
+@import '../node_modules/@angular/material/theming';
+@import 'src/variables';
+
+// 使用 Angular Material 的主题工具
+@include mat-core();
+
+// 自定义主题颜色
+$app-primary: mat-palette($mat-deep-orange);
+$app-accent: mat-palette($mat-orange, A200, A100, A400);
+
+// 定义应用主题
+$app-theme: mat-light-theme((
+  color: (
+    primary: $app-primary,
+    accent: $app-accent,
+    warn: mat-palette($mat-red),
+  ),
+  typography: mat-typography-config(),
+  // 可以根据需要进一步定制
+));
+
+// 应用主题
+@include angular-material-theme($app-theme);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: $background-color;
+}
+
+.main-container {
+  padding: 20px;
+  padding-bottom: 70px; // 确保内容在页脚上方
+}
+
+.features-section {
+  background-color: $background-color;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feature-card {
+  margin: 20px;
+  max-width: 300px;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}

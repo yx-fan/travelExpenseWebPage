@@ -1,0 +1,148 @@
+.hero-section {
+    background: url('../../../assets/images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 60px; /* 与navbar高度匹配 */
+    padding: 0;
+  }
+  
+  .image-gallery, .info-section, .core-packages, .testimonials, .about-us {
+    padding: 0 20px;
+    margin: 0;
+  }
+  
+  .hero-content {
+    text-align: center;
+  
+    h1 {
+      font-size: 3em;
+      animation: fadeInDown 1s;
+    }
+  
+    p {
+      font-size: 1.2em;
+      animation: fadeInUp 1s;
+    }
+  
+    .get-started {
+      background-color: #fff;
+      color: #2e4053;
+      margin-top: 20px;
+      animation: fadeInUp 1.5s;
+    }
+  }
+  
+  .image-gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+  
+    img {
+      width: 45%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s;
+    }
+  }
+  
+  .info-section {
+    padding: 40px 20px;
+    background-color: #f5cba7;
+    color: #2e4053;
+    text-align: center;
+    animation: fadeIn 1s;
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2em;
+    }
+  
+    .view-more {
+      background-color: #2e4053;
+      color: #fff;
+      margin-top: 20px;
+    }
+  }
+  
+  .core-packages {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    .package {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .testimonials {
+    padding: 40px 20px;
+    background-color: #f5cba7;
+    text-align: center;
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    .testimonial {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+  }
+  
+  .about-us {
+    padding: 40px 20px;
+    background-color: #f5cba7;
+    text-align: center;
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2em;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

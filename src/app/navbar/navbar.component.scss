@@ -1,0 +1,25 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #f5cba7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+  
+    .logo img {
+      height: 50px;
+    }
+  
+    .call-us {
+      background-color: #2e4053;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+  
