@@ -1,14 +1,13 @@
 @import '../node_modules/@angular/material/theming';
 @import 'src/variables';
 
-// 使用 Angular Material 的主题工具
 @include mat-core();
 
-// 自定义主题颜色
+// Define the theme
 $app-primary: mat-palette($mat-deep-orange);
 $app-accent: mat-palette($mat-orange, A200, A100, A400);
 
-// 定义应用主题
+// Define the theme configuration
 $app-theme: mat-light-theme((
   color: (
     primary: $app-primary,
@@ -16,10 +15,9 @@ $app-theme: mat-light-theme((
     warn: mat-palette($mat-red),
   ),
   typography: mat-typography-config(),
-  // 可以根据需要进一步定制
 ));
 
-// 应用主题
+// Include the theme
 @include angular-material-theme($app-theme);
 
 body {
@@ -30,7 +28,7 @@ body {
 
 .main-container {
   padding: 20px;
-  padding-bottom: 70px; // 确保内容在页脚上方
+  padding-bottom: 70px; // Make space for the footer
 }
 
 .features-section {
@@ -45,11 +43,36 @@ body {
 }
 
 .feature-card {
-  margin: 20px;
-  max-width: 300px;
-  transition: transform 0.3s;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+    margin: 20px;
+  
+    h3 {
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: #666;
+    }
+  
+    &:hover {
+      transform: translateY(-10px);
+    }
 }
 
+.package-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+  
 .feature-card:hover {
   transform: translateY(-10px);
 }
