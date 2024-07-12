@@ -1,7 +1,20 @@
 <div class="navbar">
-    <div class="logo">
-      <img src="assets/images/logo.jpg" alt="Logo">
-    </div>
-    <button class="contact-us">Contact us</button>
+  <div class="logo">
+    <img src="assets/images/logo.jpg" alt="Logo">
   </div>
-  
+  <div class="navbar-right">
+    <button class="contact-us">Contact us</button>
+    <ng-container *ngIf="authService.isLoggedIn(); else notLoggedIn">
+      <div class="dropdown">
+        <button class="dropbtn">Account</button>
+        <div class="dropdown-content">
+          <a (click)="logout()">Logout</a>
+          <a (click)="deleteAccount()">Delete Account</a>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #notLoggedIn>
+      <a routerLink="/login" class="login-btn">Login</a>
+    </ng-template>
+  </div>
+</div>
